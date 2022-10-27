@@ -1,0 +1,10 @@
+<div class="heder">
+    <h1> BitWallet</h1>
+    <nav>
+        <a routerLink="/home" routerLinkActive="active">Home</a> |
+        <a routerLink="/contact" routerLinkActive="active">Contact</a> |
+        <a routerLink="/about" routerLinkActive="active">About</a>  |
+        <a *ngIf="!user" routerLink="/" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}" (click)="onLogout()">{{Logout}}</a>
+        <button *ngIf="user" class="button logout" routerLink="/" routerLinkActive="active" (click)="onLogout()">{{Logout}}</button>
+    </nav>
+</div>

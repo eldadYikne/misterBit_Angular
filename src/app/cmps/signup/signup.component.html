@@ -1,0 +1,21 @@
+<div class="signup">
+    <div class="input">
+        <div class="singup-container">
+            <img class="bitcoin-img" src="../../../assets/img/money.png"/>
+            <span class="title">Sign up, earn more.</span>
+        </div>
+        <span class="title-seconde">Let's join us and earn easy money!</span>
+        <form *ngIf="signup" (ngSubmit)="onSignup()">
+            <input [(ngModel)]="name" placeholder="Enter your name..." type="text" id="name" name="name" />
+            <button  class="button"> Submit</button>
+        </form>
+
+        <!-- <form *ngIf="!signup" (ngSubmit)="onSignup()">
+            <input [(ngModel)]="name" type="text" id="name" name="name" />
+            <button  class="button login"> Login</button>
+        </form> -->
+        <span class="messege"> {{messege}}</span>
+        <!-- <span class="signup" (click)="onToggelLoginSignup()">{{loginTxt}}</span> -->
+        
+    </div> 
+</div>

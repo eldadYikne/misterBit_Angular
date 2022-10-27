@@ -1,0 +1,135 @@
+.home-page {
+    height: 523px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    position: relative;
+    flex-direction: column;
+    margin-top: 50px;
+
+
+    h1 {
+        margin: 0;
+    }
+
+    & .bitcoin-container {
+        padding: 15px;
+        height: 400px;
+        width: 800px;
+        box-shadow: 0px 2px 5px 1px rgb(0, 0, 0);
+        border-radius: 3px;
+        display: flex;
+        gap: 74px;
+        margin-top: 8rem;
+
+        & .chart-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 331px;
+                ;
+            }
+        }
+
+        & .bitcoin-details {
+            display: flex;
+            flex-direction: column;
+
+            & .curr-coin-container {
+                margin-top: 9px;
+                margin-bottom: 15px;
+
+                & .curr-coin {
+                    color: green;
+                    font-weight: 600;
+                }
+            }
+
+            & .user-bitcoin {
+                color: rgb(45, 108, 191);
+                font-weight: 600;
+                margin-top: 9px;
+            }
+        }
+    }
+
+    & .user-container {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+
+        img {
+            height: 50px;
+        }
+
+    }
+
+    & .coins-user {
+        margin-top: 9px;
+
+        & .coins {
+            color: green;
+            font-weight: 600;
+
+        }
+    }
+
+    & .container-btn {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        position: absolute;
+        bottom: 146px;
+        ;
+        width: 800px;
+
+        div {
+            margin: 5px;
+        }
+
+    }
+
+    .moves {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+
+        & .move {
+            background-color: rgb(233, 233, 233);
+            height: 60px;
+            width: 100%;
+            color: white;
+            width: 803px;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & .at {
+                padding-right: 15px;
+                color: black;
+                font-weight: 400;
+            }
+
+            & .to {
+                padding-left: 15px;
+                color: black;
+                font-weight: 400;
+            }
+
+            & .amount {
+                color: rgb(45, 110, 45);
+                font-weight: 400;
+
+            }
+        }
+    }
+}

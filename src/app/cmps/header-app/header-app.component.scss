@@ -1,0 +1,31 @@
+.heder {
+    height: 50px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+        padding-right: 20px;
+        color: white;
+
+        a {
+            margin-right: 3px;
+            margin-left: 3px;
+
+            text-decoration: none;
+            color: white;
+
+            &.active {
+                color: salmon;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    h1 {
+        padding-left: 20px;
+    }
+
+}
+

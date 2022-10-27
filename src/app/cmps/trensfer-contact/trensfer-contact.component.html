@@ -1,0 +1,8 @@
+<section class="transfer">
+    <h2>Transfer to {{contact.name}} </h2>
+    <span *ngIf="!transferSucceeded" class="messege"> {{messege}}</span>
+    <span *ngIf="transferSucceeded" class="messege green"> {{messege}}</span>
+    <input class="input" [(ngModel)]="coinsToTransfer" [max]="user.coins" type="number" name="coin" id="coin" />
+    <span> You had {{user.coins}}$ in wallet</span>
+    <button class="button" (click)="onTransfer()">Transfer </button>
+</section>

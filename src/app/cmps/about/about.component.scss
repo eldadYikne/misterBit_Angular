@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+h1{
+    color: white;
+    text-align: center;
+    background-color: rgb(181, 45, 45);
+}
+    &>* {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    & .ing-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        max-width: 800px;
+        height: 400px;
+    }
+}

@@ -1,0 +1,97 @@
+.signup {
+  
+    display: flex;
+    flex-basis: 100%;
+    overflow-y: hidden;
+    position: absolute;
+    align-items: center;
+    margin: auto;
+    background: url(https://thumbs.dreamstime.com/b/white-bitcoin-cryptocurrency-coin-against-grey-background-d-rendering-229824575.jpg) center/cover;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+
+    & .singup-container {
+        padding-left: 20px;
+        display: flex;
+        gap: 5px;
+
+        & .bitcoin-img {
+            height: 35px;
+        }
+
+        & .title {
+            font-size: 35px;
+            color: black;
+
+        }
+    }
+    & .title-seconde{
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+
+    & .input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 400px;
+        margin-left: 50px;
+        margin-bottom: 160px;
+
+        & .messege {
+            margin-top: 15px;
+            font-size: 20px;
+            color: red;
+        }
+
+        & .signup {
+            color: #5f6368;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        & .button {
+            background-color: #4b993c;
+            border: 0;
+            border-radius: 0.3em;
+            color: #fff;
+            font-weight: 700;
+            min-height: 40px;
+            padding: 0.6em 1.3em;
+            position: relative;
+
+            &.login {
+                background-color: #1754a4;
+
+            }
+        }
+
+        input {
+            margin-top: 90px;
+            background-color: #fafbfc;
+            border: 2px solid #dfe1e6;
+            border-radius: 3px;
+            font-size: 14px;
+            height: 34px;
+            margin-bottom: 16.8px;
+            max-width: 400px;
+            outline: none;
+            padding: 0.5em;
+            width: 320px;
+        }
+    }
+}

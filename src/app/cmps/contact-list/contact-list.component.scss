@@ -1,0 +1,29 @@
+.contact-list-container {
+    user-select: none;
+    cursor: pointer;
+
+    & .filter-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* width: 600px; */
+        justify-content: center;
+        gap: 493px;
+
+        & .new-contact {
+            margin-left: 30px;
+        }
+    }
+
+    & .contact-list {
+        display: flex;
+        gap: 1px;
+        user-select: none;
+
+        flex-direction: column;
+        /* width: 700px; */
+        justify-content: center;
+        align-items: center;
+    }
+}

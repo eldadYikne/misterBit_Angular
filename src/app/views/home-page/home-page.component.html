@@ -1,0 +1,41 @@
+<section *ngIf="currUser" class="home-page">
+    <div class="bitcoin-container">
+        <div>
+
+            <div class="user-container">
+                <div> {{currUser.name}}'s balnce </div>
+            </div>
+            <div class="bitcoin-details">
+                <div>
+                    <div class="coins-user">Wallet:<span class="coins">{{currUser.coins}}$ </span></div>
+                    <div class="user-bitcoin"> {{userBitcoinValue}} BTC </div>
+                </div>
+                <div class="curr-coin-container"> {{bitcoinValue}} BTC = <span class="curr-coin"> {{ 1
+                        |currency:currCoin}}</span></div>
+            </div>
+            <section *ngIf="showCoinsOptions" class="container-btn">
+
+                <div class="button blue" *ngFor="let coin of coinsOption" (click)="onChooseCoins(coin)"> {{coin}}</div>
+            </section>
+            <button class="button" (click)="onShowCoinsOptions()">Coin type </button>
+        </div>
+        <div class="chart-container">
+            <h3>Bitcocin statistic</h3>
+            <img src="https://buybitcoinworldwide.com/img/kb/bitcoin-price-2014.png" />
+        </div>
+    </div>
+
+    <div *ngIf="currUser.moves" class="moves">
+        <div class="move" *ngFor="let move of currUser.moves">
+            <span class="to">
+                Transfer to {{move.to }}
+            </span>
+            <span class="amount"> ${{move.amount}}</span>
+
+            <span class="at">
+                {{move.at | date:'dd/MM/yyyy hh:mm a'}}
+            </span>
+        </div>
+    </div>
+    <!-- <chart></chart> -->
+</section>

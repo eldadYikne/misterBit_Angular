@@ -1,0 +1,31 @@
+<div class="details">
+    <section class="contact-details" *ngIf="contact">
+        <img [src]="imgUrl()" />
+
+        <div class="contact-name">
+            <div>
+                <section class="name"> {{contact.name}}</section>
+                <section> {{contact.email}}</section>
+                <section> {{contact.phone}}</section>
+            </div>
+            <button (click)="onBack()" class="button"> close</button>
+        </div>
+    </section>
+    <div>
+        <trensfer-contact [contact]="contact"></trensfer-contact>
+    </div>
+
+
+</div>
+<div *ngIf="contact.moves" class="moves">
+    <div class="move" *ngFor="let move of contact.moves">
+        <span class="to">
+           Transfer to {{move.to }} 
+        </span>
+        <span class="amount"> ${{move.amount}}</span>
+         
+        <span class="at">
+            {{move.at | date:'dd/MM/yyyy hh:mm a'}}
+        </span>
+    </div>
+</div>

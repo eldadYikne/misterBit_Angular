@@ -1,0 +1,12 @@
+<section class="contact-list-container" >
+    <div class="filter-container">
+
+        <contact-filter></contact-filter>
+        <button class="button new-contact" (click)="onAddContact()">New contact</button>
+    </div>
+
+    <div class="contact-list">
+        <contact-preview (remove)="onRemoveContact($event)"  *ngFor="let contact of contacts" [contact]="contact">{{contact.name}} </contact-preview>
+    </div>
+    <router-outlet></router-outlet>
+</section>

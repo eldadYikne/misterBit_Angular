@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+
+    &.hidden {
+        overflow-y: hidden;
+    }
+}
+
+.button {
+    background: #fff;
+    border-color: transparent;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 0;
+    color: rgba(0, 0, 0, .54);
+    height: 39px;
+    padding-top: 0;
+    text-align: center;
+    cursor: pointer;
+
+
+    &.logout {
+        height: 24px;
+
+    }
+
+    &.blue {
+        width: 50px;
+        color: rgb(255, 255, 255);
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        background: rgb(226, 226, 226);
+        color: cadetblue;
+        transition: .2s;
+    }
+}
+
+.input {
+    background-color: #fafbfc;
+    border: 2px solid #dfe1e6;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 24px;
+    margin-bottom: 16.8px;
+    max-width: 400px;
+    outline: none;
+    padding: 0.5em;
+    width: 60%;
+}
