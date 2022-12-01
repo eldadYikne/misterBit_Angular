@@ -40,8 +40,7 @@
 ## About The Project
 
 An app I wrote with Vue, in which you can transfer money to your fake contacts, CRUDL them and get information about the current Bitcoin value, the market price and more! [ Take a look, it's on Github pages!](https://eldadyikne.github.io/misterbit_Angular/#/)
-
- <img src="src/assets/img/1.png" alt="" width="600" height="300">
+![Home page image](src/assets/img/1.png "Homepage")
   </a>
 
 #### Table of Contents
