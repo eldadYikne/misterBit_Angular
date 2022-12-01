@@ -1,5 +1,5 @@
 .transfer {
-    background-color: #f8f7f7;
+    background-color: rgba(153, 185, 255, 0.3607843137);
     display: flex;
     flex-basis: 100%;
     flex-direction: column;
@@ -20,7 +20,7 @@
         color: red;
         margin-bottom: 8px;
         &.green{
-            color: green;
+            color: rgb(44, 255, 44);
             
         }
 

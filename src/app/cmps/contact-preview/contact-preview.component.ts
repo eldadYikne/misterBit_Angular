@@ -1,17 +1,19 @@
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { Contact } from 'src/app/models/contact.model';
 import { Router } from '@angular/router';
+import { ContactService } from 'src/app/service/contact-service.service';
 @Component({
   selector: 'contact-preview',
   templateUrl: './contact-preview.component.html',
   styleUrls: ['./contact-preview.component.scss']
 })
 export class ContactPreviewComponent implements OnInit {
-
+  contactService = inject(ContactService)
   constructor(private router: Router) { }
 
   @Output() remove = new EventEmitter<string>
   @Input() contact!: Contact
+  contactIdx!: number
   ngOnInit(): void {
 
   }
@@ -21,43 +23,13 @@ export class ContactPreviewComponent implements OnInit {
 
   }
   imgUrl() {
-    const colors = [
-      "B7DDB0",
-      "F5EA92",
-      "BCD9EA",
-      "FAD29C",
-      "EDDBF4",
-      "51e898",
-      "F5DD29",
-      "29CCE5",
-      "FFAF3F",
-      "DFC0EB",
-      "49852E",
-      "f2d600",
-      "21567f",
-      "ff9f1a",
-      "6C547B",
-      "FBEDEB",
-      "F5D3CE",
-      "EFB3AB",
-      "EF7564",
-      "e13b24",
-    ]
+    const contactIdx = this.contactService.contacts$.subscribe(contacts => {
+      this.contactIdx = contacts.findIndex(contact => contact._id === this.contact._id)
+    })
+    console.log('contactIdx', contactIdx)
+    let gender = this.contactIdx % 2 === 0 ? 'male' : 'female'
 
-    const name = this.contact.name.split(' ')
-    let upperCase1
-    let upperCase2
-    if (name.length === 1) {
-      upperCase1 = name[0].substring(0, 1)
-      return `https://eu.ui-avatars.com/api/?name=${upperCase1}&size=250`
-
-    } else if (name.length === 2) {
-      upperCase1 = name[0].substring(0, 1)
-      upperCase2 = name[1].substring(0, 1)
-
-      return `https://eu.ui-avatars.com/api/?name=${upperCase1}+${upperCase2}&size=250&background=${colors[name[0].length]}&color=fff`
-    }
-    return `https://eu.ui-avatars.com/api/?name=kohn+Dsose&size=250`
+    return `https://xsgames.co/randomusers/assets/avatars/${gender}/${this.contactIdx}.jpg`
   }
   onEditContact(ev: MouseEvent) {
     ev.stopPropagation()

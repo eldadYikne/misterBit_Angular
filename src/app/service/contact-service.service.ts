@@ -152,7 +152,6 @@ export class ContactService {
   }
 
   updateContacts(contacts: Contact[]) {
-    console.log(contacts);
     
     this._contacts$.next(contacts)
   }
@@ -205,7 +204,6 @@ export class ContactService {
 
   private _addContact(contact: Contact) {
     //mock the server work
-    console.log('newContact',contact)
     const newContact = new Contact('', contact.name, contact.email, contact.phone,contact.coins);
     if (typeof newContact.setId === 'function') newContact.setId(getRandomId());
     

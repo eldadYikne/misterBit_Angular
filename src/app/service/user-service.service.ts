@@ -43,16 +43,15 @@ export class UserService {
   }
   onTransferCoins(toContact: Contact, amount: number) {
     const newContact = toContact
-    console.log('newContact', newContact);
-    console.log('this.user', this.user);
     if (!this.user) return
+    if (this.user?.coins <= 0) return
     if (newContact?.coins) {
-      if (this.user?.coins <= 0) return
       newContact.coins += amount
-      this.user.coins -= amount
+    } else {
+      newContact.coins = 1000+amount
     }
-    console.log(' newContact', newContact);
-    console.log(' this.user', this.user);
+    this.user.coins -= amount
+
     let newContacts: Contact[]
     let newContactToUpdate
     this.contactService.contacts$.subscribe(contacts => {
@@ -64,10 +63,10 @@ export class UserService {
         //USER TO CONTACT
         const newFromContact = new Contact(this.user._id, this.user.name, `${this.user.name}@gmail.com`, '+97265985623', this.user.coins, this.user.moves);
         const userIdx = this.usersDb.findIndex(user => user._id === newFromContact._id)
+
         // CLOSER
         newContacts = contacts
         newContactToUpdate = newFromContact
-        console.log('newFromContact', newFromContact)
 
         // ADD MOVE
 
@@ -75,9 +74,14 @@ export class UserService {
         if (!newFromContact.moves) {
           newFromContact.moves = []
         } else {
-          newFromContact.moves.push(newMove)
+          newFromContact.moves.unshift(newMove)
         }
+        
         // SPLICE AND REPLACE
+        console.log('newContact', newContact)
+        console.log('newFromContact', newFromContact)
+
+
         newContacts.splice(toContactIdx, 1, newContact)
         newContacts.splice(fromContactIdx, 1, newFromContact)
         this.usersDb.splice(userIdx, 1, this.user)
@@ -89,7 +93,6 @@ export class UserService {
 
       }
     })
-    console.log('newContactToUpdate', newContactToUpdate)
 
     return newContactToUpdate
   }

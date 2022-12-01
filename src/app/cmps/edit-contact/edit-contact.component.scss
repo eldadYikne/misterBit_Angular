@@ -15,9 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    right: 0;
 
     .contact-edit {
-        background-color: #f8f7f7;
+        background-color:#0b0e21;
         display: flex;
         flex-basis: 100%;
         flex-direction: column;
@@ -27,8 +28,9 @@
         padding-bottom: 20px;
         position: relative;
         padding: 15px;
+        color: rgb(213, 223, 245);
 
-        & .back{
+        & .back {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -37,6 +39,7 @@
             margin-right: 15px;
 
         }
+
         input {
             background-color: #fafbfc;
             border: 2px solid #dfe1e6;

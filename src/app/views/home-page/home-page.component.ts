@@ -29,7 +29,7 @@ export class HomePageComponent implements OnInit {
       this.currUser = user
 
     })
-    // this.currUser = this.userService.getLoggedInUser()
+    this.currUser = this.userService.getLoggedInUser()
     this.getUserBit()
     this.getRate()
     this.getBitRate()

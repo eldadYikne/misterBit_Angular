@@ -1,9 +1,8 @@
 .contact-preview {
-    background-color: rgb(233, 233, 233);
+    background-color: #99b9ff5c;
     height: 60px;
-    width:100% ;
     color: white;
-    width: 803px;
+    width: 682px;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -11,6 +10,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: -1px 0px 10px 3px rgb(255 255 255);
+    }
     & .img-container{
         display: flex;
         & .name-container{

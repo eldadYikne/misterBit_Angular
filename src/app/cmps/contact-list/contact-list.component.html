@@ -1,12 +1,19 @@
-<section class="contact-list-container" >
+<section class="contact-list-container">
     <div class="filter-container">
-
-        <contact-filter></contact-filter>
-        <button class="button new-contact" (click)="onAddContact()">New contact</button>
+        <div>
+        <h1>Search your friends and transfer them Bitcoin    </h1>
+        <h2>Filter your contacts by their names </h2>
+        <h2>Don't stay with any open checks...</h2>
+        </div>
+        <div>
+            <contact-filter></contact-filter>
+            <button class="button new-contact" (click)="onAddContact()">New contact</button>
+        </div>
     </div>
 
     <div class="contact-list">
-        <contact-preview (remove)="onRemoveContact($event)"  *ngFor="let contact of contacts" [contact]="contact">{{contact.name}} </contact-preview>
+        <contact-preview (remove)="onRemoveContact($event)" *ngFor="let contact of contacts" [contact]="contact">
+            {{contact.name}} </contact-preview>
     </div>
     <router-outlet></router-outlet>
 </section>

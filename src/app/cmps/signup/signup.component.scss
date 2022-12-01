@@ -1,12 +1,12 @@
 .signup {
-  
+
     display: flex;
     flex-basis: 100%;
     overflow-y: hidden;
     position: absolute;
     align-items: center;
     margin: auto;
-    background: url(https://thumbs.dreamstime.com/b/white-bitcoin-cryptocurrency-coin-against-grey-background-d-rendering-229824575.jpg) center/cover;
+    background: url(https://images.unsplash.com/photo-1543699539-33a389c5dcfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) center/cover;
     height: 100vh;
     width: 100%;
     top: 0;
@@ -22,11 +22,12 @@
 
         & .title {
             font-size: 35px;
-            color: black;
+            color: rgb(255, 255, 255);
 
         }
     }
-    & .title-seconde{
+
+    & .title-seconde {
         margin-top: 30px;
         font-size: 18px;
     }
@@ -41,6 +42,8 @@
         width: 400px;
         margin-left: 50px;
         margin-bottom: 160px;
+        background-color: #00000087;
+        border: none;
 
         & .messege {
             margin-top: 15px;
@@ -65,7 +68,7 @@
         }
 
         & .button {
-            background-color: #4b993c;
+            background-color: #40ab2bfb;
             border: 0;
             border-radius: 0.3em;
             color: #fff;
@@ -73,6 +76,10 @@
             min-height: 40px;
             padding: 0.6em 1.3em;
             position: relative;
+
+            &:hover {
+                background-color: #4fce35fb;
+            }
 
             &.login {
                 background-color: #1754a4;
