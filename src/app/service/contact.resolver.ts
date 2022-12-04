@@ -17,7 +17,7 @@ export class ContactResolver implements Resolve<Observable<void|Contact>> {
       
       const id = route.params['id']
       
-      const contact =  this.contactService.getContactById(id)
+      const contact =   this.contactService.getContactById(id)
       console.log('rout',contact);
     return contact;
 
