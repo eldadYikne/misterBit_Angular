@@ -106,12 +106,12 @@ And a bit about the project - a small App that was built in a few days, which pr
 
 #### Technologies
 
-- Vue 3
-- Vue chart.js
-- Vue-Router
-- Vuex
+- Angular
+- Observable
+- RouterLink
+ -Pipes
 - Sass
-- Vue CLI & Github pages
+- Angulat ng & Github pages
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
